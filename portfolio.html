@@ -1,0 +1,65 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+	<title></title>
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+
+		$('#scrunch').hide();
+
+		$('#about').click(function () {
+ 			 $('#scrunch').slideToggle('slow');
+
+		});
+
+
+	}); //end doc ready
+	</script>
+</head>
+<body>
+	<div id="top_wrap">
+		<section id="bio">
+			<h1><span>Dustin</span>Moore</h1>
+			<p>Web Design <span class="big">:</span> JavaScript <span class="big">:</span> Ruby on Rails</p>
+			<ul>
+				<li><a href="#portfolio">portfolio</a></li>
+				<li><a href="#">resume</a></li>
+				<li><a href="#" id="about">about</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+			<div id="scrunch">
+				<img width="120px" height="120px" src="images/face.jpg">
+				<p>Hi! I'm a student at the <span>Nashville Software School</span>. I'm only a fledgling coder at this point, but I enjoy practically every aspect of the process. I have some experience with <span>html/CSS</span> and <span>JavaScript/JQuery</span>, and am looking forward to learning <span>Ruby on Rails</span>.  Outside of school and coding, I'm an east-side-of-the-river Nashvillian, an avid <span>homebrewer</span>, and a <span>proud</span> father and husband.</p>
+			</div>
+		</section>
+		<section id ="social_sidebar">
+			<div class="right">
+				<a href="http://www.github.com/dmoore5050" target=newtab>
+					<img height="50px" width="50px" src="images/github.png">
+				</a>
+			</div>
+			<div>
+				<a href="http://www.linkedin.com/profile/view?id=105901311" target=newtab>
+					<img height="50px" width="50px" src="images/linkedin.png">
+				</a>
+			</div>
+			<div>
+				<a href="http://www.facebook.com/dustin.moore.3576" target=newtab>
+					<img height="50px" width="50px" src="images/facebook.png">
+				</a>
+			</div>
+			<div>
+				<a href="https://twitter.com/dmoore2" target=newtab>
+					<img height="50px" width="50px" src="images/twitter.png">
+				</a>
+			</div>
+		</section>
+	</div>
+	<div id="portfolio">
+	</div>
+	<div id="contact">
+	</div>
+</body>
+</html>
