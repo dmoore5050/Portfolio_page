@@ -12,7 +12,20 @@
 		$('#about').click(function () {
  			 $('#scrunch').slideToggle('slow');
 
-		});
+		}); //end about slide
+
+		$('#contact_btn').click(function() {
+			$('#contact').show();
+   			$('#contact').animate({marginLeft:'145px'}, 500);
+
+ 		}); //end contact animation
+
+ 		$('.close').click(function() {
+ 			$('#contact').css("marginLeft", "1275px");
+ 			$('#contact').hide();
+
+
+ 		});
 
 
 	}); //end doc ready
@@ -27,7 +40,7 @@
 				<li><a href="#portfolio">portfolio</a></li>
 				<li><a href="#">resume</a></li>
 				<li><a href="#" id="about">about</a></li>
-				<li><a href="#">contact</a></li>
+				<li><a href="#" id="contact_btn">contact</a></li>
 			</ul>
 			<div id="scrunch">
 				<img width="120px" height="120px" src="images/face.jpg">
@@ -60,6 +73,16 @@
 	<div id="portfolio">
 	</div>
 	<div id="contact">
+		<form name="contact_form">
+        	<input type="text" name="name" placeholder="Your Name"/>
+        	<input type="text" name="email" placeholder="Your Email"/>
+        	<p class="close"><a href="#">&times</a></p>
+        	<textarea name="message" placeholder="What can I do for you?"></textarea>
+			<div id="phone_btn"><p>615.973.2803</p></div>
+			<div id="submit_btn"><a href="">Send Your Message</a></div>
+			<div id="mail_btn"><p>dustinmoore@gmail.com</p></div>
+
+		</form>
 	</div>
 </body>
 </html>
