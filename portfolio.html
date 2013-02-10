@@ -8,6 +8,7 @@
 	$(document).ready(function(){
 
 		$('#scrunch').hide();
+		$('#portfolio').hide();
 		$('#resume').hide();
 		$('#contact').hide();
 
@@ -43,9 +44,27 @@
 			$('#scrunch').slideUp('slow');
 		}); //end about hide
 
+		$('#folio_btn').click(function() {
+			$('#portfolio').show();
+   			$('#portfolio').animate({marginTop:'30px'}, 500);
+   			$('#resume').css("marginLeft", "1275px");
+ 			$('#resume').hide();
+ 			$('#contact').css("marginLeft", "1275px");
+ 			$('#contact').hide();
+ 		}); //end portfolio animation
+
+		 $('#close_port').click(function() {
+ 			$('#portfolio').css("marginTop", "-800px");
+ 			$('#portfolio').hide();
+ 		}); //end portfolio hide
+
 		$('#resume_btn').click(function() {
 			$('#resume').show();
    			$('#resume').animate({marginLeft:'185px'}, 500);
+   			$('#portfolio').css("marginTop", "-800px");
+ 			$('#portfolio').hide();
+ 			$('#contact').css("marginLeft", "1275px");
+ 			$('#contact').hide();
  		}); //end resume animation
 
  		$('#close_res').click(function() {
@@ -56,6 +75,10 @@
 		$('#contact_btn').click(function() {
 			$('#contact').show();
    			$('#contact').animate({marginLeft:'185px'}, 500);
+   			$('#portfolio').css("marginTop", "-800px");
+ 			$('#portfolio').hide();
+ 			$('#resume').css("marginLeft", "1275px");
+ 			$('#resume').hide();
  		}); //end contact animation
 
  		$('#close_cont').click(function() {
@@ -69,21 +92,6 @@
 </head>
 <body>
 	<div id="top_wrap">
-		<section id="bio">
-			<h1><span>Dustin</span>Moore</h1>
-			<p>Web Design <span class="big">:</span> JavaScript <span class="big">:</span> Ruby on Rails</p>
-			<ul>
-				<li><a href="#" id="about">about</a></li>
-				<li><a href="#" id="folio_btn">portfolio</a></li>
-				<li><a href="#" id="resume_btn">resume</a></li>
-				<li><a href="#" id="contact_btn">contact</a></li>
-			</ul>
-			<div id="scrunch">
-				<img width="120px" height="120px" src="images/face.jpg">
-				<p>Hi! I'm a student at the <span>Nashville Software School</span>. I'm only a fledgling coder at this point, but I enjoy practically every aspect of the process. I have some experience with <span>html/CSS</span> and <span>JavaScript/JQuery</span>, and I'm looking forward to learning <span>Ruby on Rails</span>.  Outside of school and coding, I'm an east-side-of-the-river Nashvillian, an avid <span>homebrewer</span>, a recovering archivist, and a <span>proud</span> father and husband.</p>
-				<p id="close_scrunch"><a href="#">&times</a></p>
-			</div>
-		</section>
 		<section id ="social_sidebar">
 			<div class="right">
 				<a href="http://www.github.com/dmoore5050" target=newtab>
@@ -106,8 +114,28 @@
 				</a>
 			</div>
 		</section>
-	</div>
+		<section id="bio">
+			<h1><span>Dustin</span>Moore</h1>
+			<p>Web Design <span class="big">:</span> JavaScript <span class="big">:</span> Ruby on Rails</p>
+			<ul>
+				<li><a href="#" id="about">about</a></li>
+				<li><a href="#" id="folio_btn">portfolio</a></li>
+				<li><a href="#" id="resume_btn">resume</a></li>
+				<li><a href="#" id="contact_btn">contact</a></li>
+			</ul>
+			<div id="scrunch">
+				<img width="120px" height="120px" src="images/face.jpg">
+				<p>Hi! I'm a student at the <span>Nashville Software School</span>. I'm only a fledgling coder at this point, but I enjoy practically every aspect of the process. I have some experience with <span>html/CSS</span> and <span>JavaScript/JQuery</span>, and I'm looking forward to learning <span>Ruby on Rails</span>.  Outside of school and coding, I'm an east-side-of-the-river Nashvillian, an avid <span>homebrewer</span>, a recovering archivist, and a <span>proud</span> father and husband.</p>
+				<p id="close_scrunch"><a href="#">&times</a></p>
+			</div>
+		</section>
 	<div id="portfolio">
+		<p class="close" id="close_port"><a href="#">&times</a></p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 	</div>
 	<div id="resume">
 		<p class="close" id="close_res"><a href="#">&times</a></p>
@@ -123,6 +151,8 @@
 			<div id="mail_btn"><img width="21px" height="21px" src="images/icon-mail.png"><a href="mailto:dustinmoore@gmail.com">dustinmoore@gmail.com</a></div>
 
 		</form>
+	</div>	
 	</div>
+	
 </body>
 </html>
