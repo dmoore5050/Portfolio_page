@@ -25,7 +25,8 @@ body
 
 #top_wrap 
 {
-	background: #dcdcdc url("../images/skyline.jpg") no-repeat center top;
+	background: #dcdcdc url("../images/skylineam.jpg") no-repeat center top; /*am*/
+	/*background: #dcdcdc url("../images/skylinepm.jpg") no-repeat center top;*/ /*pm*/
 	font-family: Josefin;
 	height: 850px;
 	margin: -8px;
@@ -44,22 +45,14 @@ body
 	float: right;
 	width: 630px;
 	background-color:rgba(255,255,255,0.9);
-	border-bottom-right-radius: 15px;
 	margin: 30px 30px 0 0;
 	padding: 5px 20px 0 20px;
+	border-bottom-right-radius: 7px; 
 	font-weight: 100;
 	box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-background-clip: padding-box;
-	z-index: 1;
 }
-
-@-moz-document url-prefix() {
-    #bio
-    {
-        height: 317px;
-    }
-} 
 
 #bio h1
 {
@@ -67,7 +60,8 @@ body
 	margin-bottom: -12px;
 	text-align: center;
 	font-family: "Josefin";
-	color: rgb(237,145,33);
+	color: rgb(102,36,42); /*am*/
+/*	color: rgb(106, 108, 158);*/ /*pm*/
 	font-size: 4em; 
 	font-weight: 100;
 }
@@ -89,13 +83,16 @@ body
 
 .big
 {
-	color: rgb(237,145,33);
-	font-size: 1.3em;
+	font-family: "Josefin Sans Bold";
+	color: rgb(14,123,220); /*am*/
+	/*color: rgb(237,145,33);*/ /*pm*/
+	font-size: 1.1em;
 }
 
 #bio p span
 {
-	color: rgb(237,145,33);
+	color: rgb(14,123,220);
+	/*color: rgb(237,145,33);*/
 }
 
 #bio ul
@@ -111,8 +108,9 @@ body
 #bio ul li
 {
 	display: inline-block;
-	border-right: 2px solid rgb(237,145,33);
-	padding: 2px 4px 2px 0;
+	border-right: 2px solid rgb(14,123,220); /*am*/
+/*	border-right: 2px solid rgb(237,145,33);*/ /*pm*/
+	padding: 2px 4px 1px 0;
 }
 
 #bio ul li:last-child
@@ -133,11 +131,6 @@ body
 	color: black;
 }
 
-#bio ul li a:active
-{
-	font-style: italic;
-}
-
 #scrunch:after {
   content: "";
   display: table;
@@ -151,7 +144,7 @@ body
 	border-bottom-right-radius: 15px;
 }
 
-#bio p:last-child 
+#scrunch p:nth-child(2)
 {
 	float: right;
 	margin-top: 10px;
@@ -161,8 +154,26 @@ body
 	letter-spacing: 0;
 	line-height: 1.2;
 	font-size: 1em;
-	color: rgb(100,100,100);
+	color: rgb(80,80,80);
 	border: 0;
+}
+
+#scrunch p:last-child
+{
+	position: absolute;
+	right: 8px;
+	bottom: -12px;
+	font-family: Tahoma,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#scrunch p a
+{
+    color: #888;
+    text-decoration: none;
 }
 
 #social_sidebar
@@ -176,21 +187,36 @@ body
 {
 	position: relative;
 	float: right;
-	z-index: 1;
+}
+
+#resume
+{	
+	position: absolute;
+	bottom: 40px;
+	padding: 20px 5px 20px 30px;
+	margin-left: 1275px;
+	height: 360px;
+	width: 840px;
+	background-color:rgba(255,255,255,0.95);
+	border-radius: 5px;
+	box-shadow: 5px 5px rgba(34,34,34,0.3);
+	-webkit-box-shadow: 5px 5px rgba(34,34,34,0.3);
+	z-index: 0;
 }
 
 #contact
 {	
 	position: absolute;
 	bottom: 40px;
-	padding: 20px 70px;
+	padding: 20px 5px 20px 30px;
 	margin-left: 1275px;
 	height: 360px;
-	width: 820px;
-	background-color:rgba(255,255,255,0.9);
+	width: 840px;
+	background-color:rgba(255,255,255,0.8);
 	border-radius: 5px;
 	box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-box-shadow: 5px 5px rgba(34,34,34,0.3);
+	z-index: 0;
 }
 
 input
@@ -200,31 +226,28 @@ input
 	margin-left: 10px;
 	margin-bottom: 10px;
 	border-radius: 5px;
+	font-size: 0.85em;
 	border-top: 1px solid rgb(100,100,100);
 	border-right: 1px solid rgb(180,180,180);
 }
 
 input::-webkit-input-placeholder 
 {
-   color: rgb(237,145,33);
    padding-left: 5px;
 }
 
 input:-moz-placeholder 
 { /* Firefox 18- */
-   color: rgb(237,145,33); 
    padding-left: 5px;
 }
 
 input::-moz-placeholder 
-{  /* Firefox 19+ */
-   color: rgb(237,145,33); 
+{ /* Firefox 18- */
    padding-left: 5px;
 }
 
 input:-ms-input-placeholder 
 {  
-   color: rgb(237,145,33);  
    padding-left: 5px;
 }
 
@@ -232,7 +255,7 @@ input:-ms-input-placeholder
 {
 	position: absolute;
 	right: 10px;
-	top: -12px;
+	top: -13px;
 	font-family: Tahoma,Arial,sans-serif;
     font-size: 18px;
     line-height: 20px;
@@ -258,28 +281,32 @@ textarea
 
 textarea::-webkit-input-placeholder 
 {
-   color: rgb(130,130,130);
+   color: rgb(102,36,42); /*am*/
+   /*	color: rgb(106, 108, 158);*/ /*pm*/
    padding-top: 10px;
    padding-left: 15px;
 }
 
 textarea:-moz-placeholder 
 { /* Firefox 18- */
-   color: rgb(130,130,130);
+   color: rgb(102,36,42); /*am*/
+   /*	color: rgb(106, 108, 158);*/ /*pm*/
    padding-top: 10px;
    padding-left: 15px;
 }
 
 textarea::-moz-placeholder 
-{  /* Firefox 19+ */
-   color: rgb(130,130,130);
+{ /* Firefox 18- */
+   color: rgb(102,36,42); /*am*/
+   /*	color: rgb(106, 108, 158);*/ /*pm*/
    padding-top: 10px;
    padding-left: 15px;
 }
 
 textarea:-ms-input-placeholder 
 {  
-   color: rgb(130,130,130);
+   color: rgb(102,36,42); /*am*/
+   /*	color: rgb(106, 108, 158);*/ /*pm*/
    padding-top: 10px;
    padding-left: 15px;
 }
@@ -292,14 +319,24 @@ form div
 	float: left;
 	border-radius: 5px;
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bdbdbd), color-stop(1, #7f7f7f));
+	background-image: -moz-linear-gradient(top, #bdbdbd, #7f7f7f);
 }
 
 #phone_btn
 {
 	margin-left: 10px;
 }
+
+#phone_btn img
+{
+	position: absolute;
+	padding-top: 12px;
+	padding-left: 52px;
+}
+
 #phone_btn p
 {
+	padding-left: 35px;
 	text-align: center;
 	color: white;
 }
@@ -324,6 +361,7 @@ form div
 #submit_btn:hover
 {
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #bdbdbd));
+	background-image: -moz-linear-gradient(top, #FFFFFF, #bdbdbd);
 }
 
 #submit_btn a:hover
@@ -335,8 +373,19 @@ form div
 {
 	margin-left: 5px;
 }
-#mail_btn p
+
+#mail_btn img
 {
-	text-align: center;
+	position: absolute;
+	padding-top: 14px;
+	padding-left: 22px;
+}
+
+#mail_btn a
+{
+	position: relative;
+	top: 17px;
+	left: 52px;
 	color: white;
+	text-decoration: none;
 }
