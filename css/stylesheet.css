@@ -17,6 +17,45 @@
 	src: url('../fonts/JosefinSlab-Bold.ttf');
 	font-weight: bold;
 }
+.am_bg
+{
+	background: #dcdcdc url("../images/skylineam.jpg") no-repeat center top;
+}
+
+.pm_bg
+{
+	background: #dcdcdc url("../images/skylinepm.jpg") no-repeat center top;
+}
+
+.head_am
+{
+	color: rgb(102,36,42); 
+}
+
+.head_pm
+{
+	color: rgb(106, 108, 158);
+}
+
+.am
+{
+	color: rgb(14,123,220);
+}
+
+.pm
+{
+	color: rgb(237,145,33);
+}
+
+.am_border
+{
+	border-right: 2px solid rgb(14,123,220);
+}
+
+.pm_border
+{
+	border-right: 2px solid rgb(237,145,33);
+}
 
 body
 {
@@ -25,8 +64,6 @@ body
 
 #top_wrap 
 {
-	background: #dcdcdc url("../images/skylineam.jpg") no-repeat center top; /*am*/
-	/*background: #dcdcdc url("../images/skylinepm.jpg") no-repeat center top;*/ /*pm*/
 	font-family: Josefin;
 	height: 850px;
 	margin: -8px;
@@ -60,8 +97,6 @@ body
 	margin-bottom: -12px;
 	text-align: center;
 	font-family: "Josefin";
-	color: rgb(102,36,42); /*am*/
-/*	color: rgb(106, 108, 158);*/ /*pm*/
 	font-size: 4em; 
 	font-weight: 100;
 }
@@ -84,15 +119,7 @@ body
 .big
 {
 	font-family: "Josefin Sans Bold";
-	color: rgb(14,123,220); /*am*/
-	/*color: rgb(237,145,33);*/ /*pm*/
 	font-size: 1.1em;
-}
-
-#bio p span
-{
-	color: rgb(14,123,220);
-	/*color: rgb(237,145,33);*/
 }
 
 #bio ul
@@ -108,8 +135,6 @@ body
 #bio ul li
 {
 	display: inline-block;
-	border-right: 2px solid rgb(14,123,220); /*am*/
-/*	border-right: 2px solid rgb(237,145,33);*/ /*pm*/
 	padding: 2px 4px 1px 0;
 }
 

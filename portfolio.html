@@ -11,6 +11,26 @@
 		$('#resume').hide();
 		$('#contact').hide();
 
+		function applyclass()
+		{
+		var d = new Date();
+		var n = d.getHours();
+		if (n > 19 || n < 7) {
+			$('#top_wrap').addClass('pm_bg');
+			$('#bio h1').addClass('head_pm');
+			$('.big, #bio p span, #bio ul li').addClass('pm');
+			$('#bio ul li').addClass('pm_border');
+			}
+		else {
+			$('#top_wrap').addClass('am_bg');
+			$('#bio h1').addClass('head_am');
+			$('.big, #bio p span, #bio ul li').addClass('am');
+			$('#bio ul li').addClass('am_border');
+			}
+		}
+
+		window.onload = applyclass;
+
 		$('#about').click(function () {
 			 $('#close_scrunch').hide();
  			 $('#scrunch').slideToggle('slow', function() {
