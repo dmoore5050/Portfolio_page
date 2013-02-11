@@ -4,6 +4,7 @@
 
 	<title></title>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+
 	<script>
 	$(document).ready(function(){
 
@@ -16,7 +17,7 @@
 		{
 		var d = new Date();
 		var n = d.getHours();
-		if (n > 19 || n < 7) {
+		if (n >= 19 || n <= 7) {
 			$('#top_wrap').addClass('pm_bg');
 			$('#bio h1').addClass('head_pm');
 			$('.big, #bio p span, #bio ul li').addClass('pm');
@@ -30,12 +31,13 @@
 			}
 		}
 
-		window.onload = applyclass;
+		window.onload = applyclass();
+		//end day/night style switch
 
 		$('#about').click(function () {
 			 $('#close_scrunch').hide();
  			 $('#scrunch').slideToggle('slow', function() {
- 			 	$('#close_scrunch').show();
+ 			 $('#close_scrunch').show();
  			 });
 		}); //end about slide
 
@@ -46,7 +48,7 @@
 
 		$('#folio_btn').click(function() {
 			$('#portfolio').show();
-   			$('#portfolio').animate({marginTop:'30px'}, 500);
+   			$('#portfolio').animate({marginTop:'40px'}, 500);
    			$('#resume').css("marginLeft", "1275px");
  			$('#resume').hide();
  			$('#contact').css("marginLeft", "1275px");
@@ -61,6 +63,8 @@
 		$('#resume_btn').click(function() {
 			$('#resume').show();
    			$('#resume').animate({marginLeft:'185px'}, 500);
+   			$('#close_scrunch').hide();
+			$('#scrunch').hide();
    			$('#portfolio').css("marginTop", "-800px");
  			$('#portfolio').hide();
  			$('#contact').css("marginLeft", "1275px");
@@ -75,6 +79,8 @@
 		$('#contact_btn').click(function() {
 			$('#contact').show();
    			$('#contact').animate({marginLeft:'185px'}, 500);
+   			$('#close_scrunch').hide();
+			$('#scrunch').hide();
    			$('#portfolio').css("marginTop", "-800px");
  			$('#portfolio').hide();
  			$('#resume').css("marginLeft", "1275px");
@@ -85,7 +91,6 @@
  			$('#contact').css("marginLeft", "1275px");
  			$('#contact').hide();
  		}); //end contact hide
-
 
 	}); //end doc ready
 	</script>
@@ -118,38 +123,76 @@
 			<h1><span>Dustin</span>Moore</h1>
 			<p>Web Design <span class="big">:</span> JavaScript <span class="big">:</span> Ruby on Rails</p>
 			<ul>
-				<li><a href="#" id="about">about</a></li>
-				<li><a href="#" id="folio_btn">portfolio</a></li>
-				<li><a href="#" id="resume_btn">resume</a></li>
-				<li><a href="#" id="contact_btn">contact</a></li>
+				<li>
+					<a href="#" id="about">about</a>
+				</li>
+				<li>
+					<a href="#" id="folio_btn">portfolio</a>
+				</li>
+				<li>
+					<a href="#" id="resume_btn">resume</a>
+				</li>
+				<li>
+					<a href="#" id="contact_btn">contact</a>
+				</li>
 			</ul>
 			<div id="scrunch">
 				<img width="120px" height="120px" src="images/face.jpg">
 				<p>Hi! I'm a student at the <span>Nashville Software School</span>. I'm only a fledgling coder at this point, but I enjoy practically every aspect of the process. I have some experience with <span>html/CSS</span> and <span>JavaScript/JQuery</span>, and I'm looking forward to learning <span>Ruby on Rails</span>.  Outside of school and coding, I'm an east-side-of-the-river Nashvillian, an avid <span>homebrewer</span>, a recovering archivist, and a <span>proud</span> father and husband.</p>
-				<p id="close_scrunch"><a href="#">&times</a></p>
+				<p id="close_scrunch">
+					<a href="#">&times</a>
+				</p>
 			</div>
 		</section>
 	<div id="portfolio">
 		<p class="close" id="close_port"><a href="#">&times</a></p>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
+		<ul id="carousel">
+			<li>
+				<a href="#">
+					<img width="200px" src="images/1.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="200px" src="images/2.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="200px" src="images/3.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="200px" src="images/4.jpg">
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div id="resume">
-		<p class="close" id="close_res"><a href="#">&times</a></p>
+		<p class="close" id="close_res">
+			<a href="#">&times</a>
+		</p>
 	</div>
 	<div id="contact">
 		<form name="contact_form">
         	<input type="text" name="name" placeholder="Your Name"/>
         	<input type="text" name="email" placeholder="Your Email"/>
-        	<p id="close_cont" class="close" ><a href="#">&times</a></p>
+        	<p id="close_cont" class="close" >
+        		<a href="#">&times</a>
+        	</p>
         	<textarea name="message" placeholder="What can I do for you?"></textarea>
-			<div id="phone_btn"><img width="20px" height="20px" src="images/icon-phone.png"><p>615.973.2803</p></div>
-			<div id="submit_btn"><a href="">Send Your Message</a></div>
-			<div id="mail_btn"><img width="21px" height="21px" src="images/icon-mail.png"><a href="mailto:dustinmoore@gmail.com">dustinmoore@gmail.com</a></div>
-
+			<div id="phone_btn">
+				<img width="20px" height="20px" src="images/icon-phone.png">
+				<p>615.973.2803</p>
+			</div>
+			<div id="submit_btn">
+				<a href="">Send Your Message</a>
+			</div>
+			<div id="mail_btn">
+				<img width="21px" height="21px" src="images/icon-mail.png">
+				<a href="mailto:dustinmoore@gmail.com">dustinmoore@gmail.com</a>
+			</div>
 		</form>
 	</div>	
 	</div>
