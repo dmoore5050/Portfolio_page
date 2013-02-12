@@ -1,7 +1,7 @@
 @font-face 
 {
 	font-family: Josefin;
-	src: url('../fonts/JosefinSansStd-Light.otf');
+	src: url('../fonts/JosefinSans-Regular.ttf');
 }
 
 @font-face 
@@ -85,7 +85,7 @@ body
 	margin: 30px 10px 0 0;
 	padding: 5px 20px 0 20px;
 	border-bottom-right-radius: 7px; 
-	font-weight: 100;
+	font-weight: 300;
 	box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-background-clip: padding-box;
@@ -98,6 +98,7 @@ body
 	margin-bottom: -12px;
 	text-align: center;
 	font-family: "Josefin";
+	letter-spacing: 1px;
 	font-size: 4em; 
 	font-weight: 100;
 }
@@ -111,7 +112,7 @@ body
 {
 	margin: 0;
 	padding-bottom: 5px;
-	color: rgb(100,100,100);
+	color: rgb(80,80,80);
 	text-align: center;
 	letter-spacing: 2px;
 	border-bottom: 1px solid rgb(100,100,100);
@@ -121,6 +122,9 @@ body
 {
 	font-family: "Josefin Sans Bold";
 	font-size: 1.1em;
+	font-weight: 700;
+	letter-spacing: 0;
+	padding-right: 3px;
 }
 
 #bio ul
@@ -147,7 +151,7 @@ body
 #bio ul li a 
 {    
 	padding: 0 10px;
-	color: rgb(100,100,100);
+	color: rgb(80,80,80);
 	font-size: 1.1em;
 	text-decoration: none;
 }
@@ -168,6 +172,11 @@ body
   content: "";
   display: table;
   clear: both;
+}
+
+#scrunch
+{
+	display: none;
 }
 
 #scrunch p:nth-child(2)
@@ -216,8 +225,9 @@ body
 
 #portfolio
 {
+	display: none;
 	position: absolute;
-	padding: 15px 5px 0 15px;
+	padding: 20px 5px 0 15px;
 	margin-top: -800px;
 	margin-left: 20px;
 	width: 210px;
@@ -225,6 +235,36 @@ body
 	border-bottom-right-radius: 7px;
 	box-shadow: 5px 5px rgba(34,34,34,0.3);
 	-webkit-box-shadow: 5px 5px rgba(34,34,34,0.3);
+}
+
+#ticker-previous
+{
+	right: 141px;
+	font-weight: 200;
+	font-size: 0.95em;
+}
+
+#divider
+{
+	right: 109px;
+}
+
+.divider_am
+{
+	color: rgb(14,123,220);
+
+}
+
+.divider_pm
+{
+	color: rgb(237,145,33);
+}
+
+#ticker-next
+{
+	right: 60px; 
+	font-weight: 200; 
+	font-size: 0.95em;
 }
 
 #portfolio ul
@@ -235,6 +275,7 @@ body
 
 #resume
 {	
+	display: none;
 	position: absolute;
 	bottom: 15px;
 	padding: 20px 5px 20px 30px;
@@ -249,6 +290,7 @@ body
 
 #contact
 {	
+	display: none;
 	position: absolute;
 	bottom: 15px;
 	padding: 20px 5px 20px 30px;
@@ -296,8 +338,9 @@ input:-ms-input-placeholder
 .close
 {
 	position: absolute;
+	margin: 0;
 	right: 10px;
-	top: -13px;
+	top: 6px;
 	font-family: Tahoma,Arial,sans-serif;
     font-size: 18px;
     line-height: 20px;

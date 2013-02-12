@@ -1,33 +1,34 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.css">
 
 	<title></title>
-	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="jquery.totemticker.js"></script>
+	<script src="jquery.tooltipster.js"></script>
+		<link rel="stylesheet" type="text/css" href="tooltipster.css">
 
 	<script>
 	$(document).ready(function(){
-
-		$('#scrunch').hide();
-		$('#portfolio').hide();
-		$('#resume').hide();
-		$('#contact').hide();
 
 		function applyclass()
 		{
 		var d = new Date();
 		var n = d.getHours();
-		if (n >= 19 || n <= 7) {
+		if (n >= 19 || n < 7) {
 			$('#top_wrap').addClass('pm_bg');
 			$('#bio h1').addClass('head_pm');
 			$('.big, #bio p span, #bio ul li').addClass('pm');
 			$('#bio ul li').addClass('pm_border');
+			$('#divider').addClass('divider_pm');
 			}
 		else {
 			$('#top_wrap').addClass('am_bg');
 			$('#bio h1').addClass('head_am');
 			$('.big, #bio p span, #bio ul li').addClass('am');
 			$('#bio ul li').addClass('am_border');
+			$('#divider').addClass('divider_am');
 			}
 		}
 
@@ -35,9 +36,13 @@
 		//end day/night style switch
 
 		$('#about').click(function () {
-			 $('#close_scrunch').hide();
- 			 $('#scrunch').slideToggle('slow', function() {
- 			 $('#close_scrunch').show();
+			$('#resume').css("marginLeft", "1275px");
+ 			$('#resume').hide();
+ 			$('#contact').css("marginLeft", "1275px");
+ 			$('#contact').hide();
+			$('#close_scrunch').hide();
+ 			$('#scrunch').slideToggle('slow', function() {
+ 			$('#close_scrunch').show();
  			 });
 		}); //end about slide
 
@@ -92,6 +97,14 @@
  			$('#contact').hide();
  		}); //end contact hide
 
+	 	$('#vertical-ticker').totemticker({
+			row_height	:	'135px',
+			next		:	'#ticker-next',
+			previous	:	'#ticker-previous',
+			max_items   :   4,
+			speed       :   400
+	    }); //end portfolio slider
+
 	}); //end doc ready
 	</script>
 </head>
@@ -121,7 +134,7 @@
 		</section>
 		<section id="bio">
 			<h1><span>Dustin</span>Moore</h1>
-			<p>Web Design <span class="big">:</span> JavaScript <span class="big">:</span> Ruby on Rails</p>
+			<p>Web Design <span class="big">::</span> JavaScript <span class="big">::</span> Ruby on Rails</p>
 			<ul>
 				<li>
 					<a href="#" id="about">about</a>
@@ -145,8 +158,11 @@
 			</div>
 		</section>
 	<div id="portfolio">
+		<p class="close" id="ticker-previous"><a href="#">prev</a></p>
+		<p class="close" id="divider">::</p>
+		<p class="close" id="ticker-next"><a href="#">next</a></p>
 		<p class="close" id="close_port"><a href="#">&times</a></p>
-		<ul id="carousel">
+		<ul id="vertical-ticker">
 			<li>
 				<a href="#">
 					<img width="200px" src="images/1.jpg">
@@ -165,6 +181,16 @@
 			<li>
 				<a href="#">
 					<img width="200px" src="images/4.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="200px" src="images/5.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="200px" src="images/6.jpg">
 				</a>
 			</li>
 		</ul>
